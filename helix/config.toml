@@ -35,3 +35,4 @@ S-down = "page_cursor_half_down"
 [keys.normal.space]
 x = ":buffer-close"
 u = ":reset-diff-change"
+i = ":toggle-option lsp.display-inlay-hints"
