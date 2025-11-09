@@ -1,0 +1,3 @@
+[language-server.clangd]
+command = "/home/roscale/.espressif/tools/esp-clang/esp-19.1.2_20250312/esp-clang/bin/clangd"
+args = ["--background-index", "--query-driver=**"]
