@@ -2,27 +2,37 @@ theme = "tokyonight_storm"
 
 [editor]
 bufferline = "always"
+end-of-line-diagnostics = "hint"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
 
-[editor.lsp]
-display-inlay-hints = true
-
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
-C-s = ":wa"
 "=" = ":format"
+x = "select_line_below"
+X = "select_line_above"
 tab = ":buffer-next"
 S-tab = ":buffer-previous"
 S-up = "page_cursor_half_up"
 S-down = "page_cursor_half_down"
-x = "select_line_below"
-X = "select_line_above"
-C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 
 [keys.select]
 S-up = "page_cursor_half_up"
