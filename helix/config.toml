@@ -59,3 +59,7 @@ l = [
   ":redraw", 
   ":reload-all"
 ]
+
+[keys.select.space]
+u = ":reset-diff-change"
+
