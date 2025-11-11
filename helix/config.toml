@@ -33,23 +33,14 @@ S-up = "page_cursor_half_up"
 S-down = "page_cursor_half_down"
 C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-
-[keys.select]
-S-up = "page_cursor_half_up"
-S-down = "page_cursor_half_down"
-
-[keys.normal.space]
-x = ":buffer-close"
-u = ":reset-diff-change"
-i = ":toggle-option lsp.display-inlay-hints"
-y = [
+C-e = [
   ':sh rm -f /tmp/unique-file',
   ":insert-output yazi '%{buffer_name}' --chooser-file=/tmp/unique-file",
   ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
   ':open %sh{cat /tmp/unique-file}',
   ':redraw',
 ]
-l = [
+C-g = [
   ":write-all", 
   ":new", 
   ":insert-output lazygit", 
@@ -59,6 +50,15 @@ l = [
   ":redraw", 
   ":reload-all"
 ]
+
+[keys.select]
+S-up = "page_cursor_half_up"
+S-down = "page_cursor_half_down"
+
+[keys.normal.space]
+x = ":buffer-close"
+u = ":reset-diff-change"
+i = ":toggle-option lsp.display-inlay-hints"
 
 [keys.select.space]
 u = ":reset-diff-change"
