@@ -54,6 +54,8 @@ C-g = [
 [keys.select]
 S-up = "page_cursor_half_up"
 S-down = "page_cursor_half_down"
+C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 
 [keys.normal.space]
 x = ":buffer-close"
