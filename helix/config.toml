@@ -50,6 +50,12 @@ C-g = [
   ":redraw", 
   ":reload-all"
 ]
+C-r = [
+    ":write-all",
+    ":insert-output scooter --no-stdin >/dev/tty",
+    ":redraw",
+    ":reload-all"
+]
 
 [keys.select]
 S-up = "page_cursor_half_up"
@@ -64,4 +70,3 @@ i = ":toggle-option lsp.display-inlay-hints"
 
 [keys.select.space]
 u = ":reset-diff-change"
-
