@@ -42,10 +42,12 @@ C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befo
 C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-e = [
   ":sh rm -f /tmp/yazi-path",
+  ":write-all",
   ":insert-output yazi '%{buffer_name}' --chooser-file=/tmp/yazi-path",
   ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
   ":open %sh{cat /tmp/yazi-path}",
   ":redraw",
+  ":reload-all",
   ":set mouse false",
   ":set mouse true",
 ]
