@@ -119,6 +119,8 @@ setopt share_history
 setopt hist_ignore_dups
 setopt hist_ignore_space
 
+export SSH_AUTH_SOCK=/home/roscale/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+
 . "$HOME/.cargo/env"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
@@ -130,5 +132,4 @@ alias ll="ls -l"
 alias grep="rg"
 alias cat="bat"
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
-
 
