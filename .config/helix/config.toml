@@ -3,6 +3,7 @@ theme = "tokyonight_storm"
 [editor]
 bufferline = "always"
 end-of-line-diagnostics = "hint"
+default-yank-register = "+"
 
 [editor.lsp]
 display-inlay-hints = true
