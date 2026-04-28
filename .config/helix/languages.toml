@@ -1,3 +1,3 @@
 [language-server.clangd]
-command = "clang-22"
+command = "clangd-22"
 args = ["--background-index", "--query-driver=**"]
