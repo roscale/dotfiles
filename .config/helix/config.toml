@@ -1,7 +1,6 @@
 theme = "tokyonight_storm"
 
 [editor]
-bufferline = "always"
 end-of-line-diagnostics = "hint"
 default-yank-register = "+"
 
@@ -38,8 +37,6 @@ d = "delete_selection_noyank"
 A-d = "delete_selection"
 c = "change_selection_noyank"
 A-c = "change_selection"
-tab = ":buffer-next"
-S-tab = ":buffer-previous"
 S-up = "page_cursor_half_up"
 S-down = "page_cursor_half_down"
 C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
