@@ -131,7 +131,6 @@ export VISUAL=hx
 export SSH_AUTH_SOCK=/home/roscale/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
 
 . "$HOME/.cargo/env"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
