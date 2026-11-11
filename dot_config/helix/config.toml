@@ -1,0 +1,90 @@
+[theme]
+dark = "catppuccin_frappe"
+light = "catppuccin_latte"
+
+[editor]
+end-of-line-diagnostics = "hint"
+default-yank-register = "+"
+
+[editor.lsp]
+display-inlay-hints = true
+goto-reference-include-declaration = false
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true
+after-delay.timeout = 100
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+"=" = ":format"
+ret = "goto_word"
+x = "select_line_below"
+X = "select_line_above"
+d = "delete_selection_noyank"
+A-d = "delete_selection"
+c = "change_selection_noyank"
+A-c = "change_selection"
+S-up = "page_cursor_half_up"
+S-down = "page_cursor_half_down"
+C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-e = [
+  ":sh rm -f /tmp/yazi-path",
+  ":write-all",
+  ":insert-output yazi '%{buffer_name}' --chooser-file=/tmp/yazi-path",
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ":open %sh{cat /tmp/yazi-path}",
+  ":redraw",
+  ":reload-all",
+  ":set mouse false",
+  ":set mouse true",
+]
+C-g = [
+  ":sh rm -f /tmp/lazygit-path",
+  ":write-all",
+  ":insert-output lazygit",
+  ':insert-output echo "\x1b[?1049h" > /dev/tty',
+  ":open %sh{cat /tmp/lazygit-path}",
+  ":redraw",
+  ":reload-all",
+  ":set mouse false",
+  ":set mouse true",
+]
+C-r = [
+  ":write-all",
+  ":insert-output scooter --no-stdin >/dev/tty",
+  ":redraw",
+  ":reload-all",
+  ":set mouse false",
+  ":set mouse true",
+]
+
+[keys.select]
+D = "delete_selection"
+S-up = "page_cursor_half_up"
+S-down = "page_cursor_half_down"
+C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+
+[keys.normal.space]
+x = ":buffer-close"
+u = ":reset-diff-change"
+i = ":toggle-option lsp.display-inlay-hints"
+
+[keys.select.space]
+u = ":reset-diff-change"

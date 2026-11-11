@@ -1,0 +1,15 @@
+[language-server.clangd]
+command = "clangd-22"
+args = ["--background-index", "--query-driver=**"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[[language]]
+name = "python"
+language-servers = ["ruff", "ty"]
