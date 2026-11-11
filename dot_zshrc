@@ -144,3 +144,14 @@ alias get_idf='. $HOME/esp/esp-idf/export.sh'
 source <(fzf --zsh)
 
 . "$HOME/.local/share/../bin/env"
+
+c() {
+  if [ -f .claude_session ]; then
+    local cmd
+    cmd=$(cat .claude_session)
+    rm -f .claude_session
+    eval "$cmd"
+  else
+    claude "$@"
+  fi
+}
